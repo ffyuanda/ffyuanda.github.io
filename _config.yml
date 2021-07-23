@@ -65,9 +65,6 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ffyuanda"
-    - label: "Bilibili"
-      icon: "/assets/images/bilibili-tv.svg"
-      url: "https://space.bilibili.com/38739103/video"
 
 footer:
   links:
