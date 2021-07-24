@@ -65,6 +65,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ffyuanda"
+    - label: "Email"
+      icon: "fas fa-envelope-square"
+      url: "shaoxuan.yuan02@gmail.com"
 
 footer:
   links:
