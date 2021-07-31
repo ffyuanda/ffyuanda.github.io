@@ -6,7 +6,7 @@ tags:
   - learn
 ---
 
-Since I'm learning algorithms these days (cranmming Leetcode actually), I find it quite necessary and interesting to do some notes about sorting algorithms, a series of common knowledge for every programmer.
+Since I'm learning algorithms these days (cramming Leetcode actually), I find it quite necessary and interesting to do some notes about sorting algorithms, a series of common knowledge for every programmer.
 
 I'll be realizing these algorithms myself using Python, in order to put the process in practice for better familiarity.
 
@@ -63,6 +63,59 @@ It's average time complexity is <span>$O(nlogn)$</span>
 <br>
 
 ![Big-O cheatsheet](/assets/images/Big_O_cheat_sheet.jpeg)
+<br>
 
 ---
-Stay tuned! More content are coming.
+
+# Mergesort
+
+```python
+""" self-realized mergesort python version """
+# https://www.youtube.com/watch?v=TzeBrDU-JaY&t=232s
+
+
+def merge(a: list, b: list) -> list:
+    merged = []
+    ai, bi = 0, 0
+    while ai < len(a) and bi < len(b):
+        if a[ai] <= b[bi]:
+            merged.append(a[ai])
+            ai += 1
+        else:
+            merged.append(b[bi])
+            bi += 1
+            
+    # put in the remaining elements
+    for i in range(ai, len(a)):
+        merged.append(a[i])
+    for i in range(bi, len(b)):
+        merged.append(b[i])
+
+    return merged
+
+
+def mergesort(l: list):
+    mid = len(l) // 2
+    
+    # split in half
+    a = l[:mid]
+    b = l[mid:]
+    if len(l) <= 2:
+        return merge(a, b)
+    
+    # recursively merge two split arrays
+    return merge(mergesort(a), mergesort(b))
+
+
+c = [2, 4, 1, 6, 8, 5, 7, 7, 3, 7]
+print(mergesort(c))
+```
+Mergesort is also a Divide and Conquer algorithm, much like the quicksort. It is more intuitive and closer to the divide and conquer nature: it splits the list in half recursively, and merge them back in ascending order. <br>
+
+The merge and sort are divided into two parts, much like the partition and sort in quicksort. <br>
+
+Mergesort is a stable sorting algorithm
+Mergesort's time complexity: <span>$O(nlogn)$</span>
+
+---
+Stay tuned! More contents are coming.
