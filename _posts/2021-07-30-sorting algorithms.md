@@ -63,6 +63,7 @@ It's **time complexity** is <span>$O(nlogn)$</span>
 <br>
 
 ![Big-O cheatsheet](/assets/images/Big_O_cheat_sheet.jpeg)
+<p style="text-align:center;"><i>Referenced from <a href="https://towardsdatascience.com/big-o-d13a8b1068c8">Towards Data Science<a></i></p>
 <br>
 
 ---
