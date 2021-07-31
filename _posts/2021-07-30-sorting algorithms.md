@@ -60,7 +60,7 @@ Then, it uses the [start, pivot_index - 1] and [pivot_index + 1, end] as the arr
 It is also a **non-stable** algorithm (a sorting algorithm is said to be stable if it maintains the relative order of records in the case of equality of keys).  
 <br>
 It's average time complexity is 
-<div>\[O(nlogn)\]</div>
+\[O(nlogn)\]
 <br>
 
 ![Big-O cheatsheet](/assets/images/Big_O_cheat_sheet.jpeg)
