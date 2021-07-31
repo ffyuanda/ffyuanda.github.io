@@ -114,7 +114,7 @@ Mergesort is also a Divide and Conquer algorithm, much like the quicksort. It is
 
 The merge and sort are divided into two parts, much like the partition and sort in quicksort. <br>
 
-Mergesort is a stable sorting algorithm
+Mergesort is a stable sorting algorithm.  
 Mergesort's time complexity: <span>$O(nlogn)$</span>
 
 ---
