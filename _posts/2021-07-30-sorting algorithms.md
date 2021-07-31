@@ -59,7 +59,7 @@ Then, it uses the [start, pivot_index - 1] and [pivot_index + 1, end] as the arr
 <br>
 It is also a **non-stable** algorithm (a sorting algorithm is said to be stable if it maintains the relative order of records in the case of equality of keys).  
 <br>
-It's average time complexity is <span>$O(nlogn)$</span>
+It's **time complexity** is <span>$O(nlogn)$</span>
 <br>
 
 ![Big-O cheatsheet](/assets/images/Big_O_cheat_sheet.jpeg)
@@ -114,8 +114,8 @@ Mergesort is also a Divide and Conquer algorithm, much like the quicksort. It is
 
 The merge and sort are divided into two parts, much like the partition and sort in quicksort. <br>
 
-Mergesort is a stable sorting algorithm.  
-Mergesort's time complexity: <span>$O(nlogn)$</span>
+Mergesort is a **stable** sorting algorithm.  
+Mergesort's **time complexity**: <span>$O(nlogn)$</span>
 
 ---
 Stay tuned! More contents are coming.
