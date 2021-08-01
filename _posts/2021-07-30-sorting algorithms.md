@@ -148,7 +148,7 @@ print(insertionsort(l))
 ```
 Insertion sort sorts the numbers just like how we human sort cards. It has two parts: sorted and unsorted. And it moves the card from unsorted to sorted by comparing the current unsorted card with each card from the sorted pile, and decide the right index to insert it.
 
-**Time complexity:** <span>$O(n^2)$</span>
+**Time complexity:** <span>$O(n^2)$</span>  
 **Stability:** True
 
 ---
@@ -178,7 +178,7 @@ print(bubblesort(l))
 ```
 Bubble sort's princple is quite straight-foward, it swaps each element with the element right next to it to "bubble up" the larger ones to the right of the array. And it does this process n times to make sure the whole array is sorted.
 
-**Time complexity:** <span>$O(n^2)$</span>
+**Time complexity:** <span>$O(n^2)$</span>  
 **Stability:** True
 
 ---
@@ -213,5 +213,5 @@ print(selectionsort([2, 3, 1, 4, 7, 5]))
 ```
 Selection sort turns out to be the easiest sorting algorithm among these ones. Its logic cannot get simpler, it finds the minimum element from the unsorted pile and put the element into the sorted pile. And it repeats this process n times. It is intuitive and I think there are many of us sort cards using this idea.
 
-**Time complexity:** <span>$O(n^2)$</span>
+**Time complexity:** <span>$O(n^2)$</span>  
 **Stability:** No
