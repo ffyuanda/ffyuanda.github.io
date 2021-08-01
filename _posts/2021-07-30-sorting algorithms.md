@@ -214,4 +214,4 @@ print(selectionsort([2, 3, 1, 4, 7, 5]))
 Selection sort turns out to be the easiest sorting algorithm among these ones. Its logic cannot get simpler, it finds the minimum element from the unsorted pile and put the element into the sorted pile. And it repeats this process n times. It is intuitive and I think there are many of us sort cards using this idea.
 
 **Time complexity:** <span>$O(n^2)$</span>  
-**Stability:** No
+**Stability:** False
