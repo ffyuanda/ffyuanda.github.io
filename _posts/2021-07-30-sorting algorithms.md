@@ -119,4 +119,99 @@ Mergesort is a **stable** sorting algorithm.
 Mergesort's **time complexity**: <span>$O(nlogn)$</span>
 
 ---
-Stay tuned! More contents are coming.
+# Insertion sort
+```python
+""" self-realized insertion sort python version """
+# https://www.youtube.com/watch?v=i-SKeOcBwko
+
+
+def insertionsort(a: list):
+    bound = 1
+    while bound < len(a):
+        curr, insert = a[bound], 0
+        # iterate downward from the boundary between sorted and unsorted (bound)
+        for j in range(bound-1, -1, -1):
+            if a[j] >= curr:
+                # move the cards
+                a[j+1] = a[j]
+            else:
+                # found the insertion index
+                insert = j + 1
+                break
+        a[insert] = curr
+        bound += 1
+    return a
+
+
+l = [7, 2, 4, 1, 5, 3]
+print(insertionsort(l))
+```
+Insertion sort sorts the numbers just like how we human sort cards. It has two parts: sorted and unsorted. And it moves the card from unsorted to sorted by comparing the current unsorted card with each card from the sorted pile, and decide the right index to insert it.
+
+**Time complexity:** <span>$O(n^2)$</span>
+**Stability:** True
+
+---
+# Bubble sort
+```python
+""" self-realized bubble sort python version """
+# https://www.youtube.com/watch?v=Jdtq5uKz-w4
+
+
+def bubblesort(a: list):
+    length = len(a)
+    for i in range(length):
+        flag = 0
+        for j in range(length - i - 1):
+            # no need to go through the sorted part
+            if a[j] >= a[j + 1]:
+                a[j], a[j + 1] = a[j + 1], a[j]
+                flag = 1
+        if flag == 0:
+            # no swap at all: already sorted
+            break
+    return a
+
+
+l = [2, 3, 1, 4, 7, 5]
+print(bubblesort(l))
+```
+Bubble sort's princple is quite straight-foward, it swaps each element with the element right next to it to "bubble up" the larger ones to the right of the array. And it does this process n times to make sure the whole array is sorted.
+
+**Time complexity:** <span>$O(n^2)$</span>
+**Stability:** True
+
+---
+# Selection sort
+```python
+""" self-realized selection sort python version """
+# https://www.youtube.com/watch?v=GUDLRan2DWM
+
+
+def find_min_index(a: list, start: int) -> int:
+    min_ = float('inf')
+    min_i = 0
+    for i in range(start, len(a)):
+        if a[i] <= min_:
+            min_ = a[i]
+            min_i = i
+    return min_i
+
+
+def selectionsort(a: list) -> list:
+    count = 0
+
+    while count < len(a):
+        min_i = find_min_index(a, count)
+        a[count], a[min_i] = a[min_i], a[count]
+        count += 1
+
+    return a
+
+
+print(selectionsort([2, 3, 1, 4, 7, 5]))
+```
+Selection sort turns out to be the easiest sorting algorithm among these ones. Its logic cannot get simpler, it finds the minimum element from the unsorted pile and put the element into the sorted pile. And it repeats this process n times. It is intuitive and I think there are many of us sort cards using this idea.
+
+**Time complexity:** <span>$O(n^2)$</span>
+**Stability:** No
