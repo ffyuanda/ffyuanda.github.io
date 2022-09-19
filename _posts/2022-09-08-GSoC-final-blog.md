@@ -6,7 +6,7 @@ tags:
   - learn
 ---
 
-My GSoC project: [More Sparse Index Integrations](https://summerofcode.withgoogle.com/proposals/details/8dFdpOKg)
+My GSoC project: [More Sparse Index Integrations](https://summerofcode.withgoogle.com/programs/2022/projects/hz4rcOUB)
 
 My proposal: [GSoC 2022 Git Contributor Proposal](https://docs.google.com/document/d/1VZq0XGl-wCxECxJamKN9PGVPXaBhszQWV1jaIIvlFjE/edit?usp=sharing)
 
