@@ -10,7 +10,7 @@ My GSoC project: [More Sparse Index Integrations](https://summerofcode.withgoogl
 
 My proposal: [GSoC 2022 Git Contributor Proposal](https://docs.google.com/document/d/1VZq0XGl-wCxECxJamKN9PGVPXaBhszQWV1jaIIvlFjE/edit?usp=sharing)
 
-Previous blogs:
+Previous blogs:  
 [GSoC Week 1](https://ffyuanda.github.io/blog/GSoC-week-1/)  
 [GSoC Week 2](https://ffyuanda.github.io/blog/GSoC-week-2/)  
 [GSoC Week 3 - 4](https://ffyuanda.github.io/blog/GSoC-week-3-4/)  
@@ -30,46 +30,46 @@ what I've done, and what is the result for each command.
 * Series "out-to-in" (in branch 'master')  
 [GitHub branch](https://github.com/git/git/commit/0455aad1e39f21acbaa8a84129fec8eb77682e0d)  
 [Mailing list](https://lore.kernel.org/git/20220331091755.385961-1-shaoxuan.yuan02@gmail.com/)  
-mv: add check_dir_in_index() and solve general dir check issue
-mv: use flags mode for update_mode
-mv: check if <destination> exists in index to handle overwriting
-mv: check if out-of-cone file exists in index with SKIP_WORKTREE bit
-mv: decouple if/else-if checks using goto
-mv: update sparsity after moving from out-of-cone to in-cone
-t1092: mv directory from out-of-cone to in-cone
-t7002: add tests for moving out-of-cone file/directory
+mv: add check_dir_in_index() and solve general dir check issue  
+mv: use flags mode for update_mode  
+mv: check if `<destination>` exists in index to handle overwriting\
+mv: check if out-of-cone file exists in index with SKIP_WORKTREE bit\
+mv: decouple if/else-if checks using goto\
+mv: update sparsity after moving from out-of-cone to in-cone\
+t1092: mv directory from out-of-cone to in-cone\
+t7002: add tests for moving out-of-cone file/directory\
 
 * Series "in-to-out" (in branch 'next')  
 [GitHub branch](https://github.com/git/git/commit/2316d9ce4d2cd85bdda3111358fc6b76af9f231a)  
 [Mailing list](https://lore.kernel.org/git/20220719132809.409247-1-shaoxuan.yuan02@gmail.com/)  
-mv: check overwrite for in-to-out move
-advice.h: add advise_on_moving_dirty_path()
-mv: cleanup empty WORKING_DIRECTORY
-mv: from in-cone to out-of-cone
-mv: remove BOTH from enum update_mode
-mv: check if `<destination>` is a SKIP_WORKTREE_DIR
-mv: free the with_slash in check_dir_in_index()
-mv: rename check_dir_in_index() to empty_dir_has_sparse_contents()
-t7002: add tests for moving from in-cone to out-of-cone
+mv: check overwrite for in-to-out move  
+advice.h: add advise_on_moving_dirty_path()  
+mv: cleanup empty WORKING_DIRECTORY  
+mv: from in-cone to out-of-cone  
+mv: remove BOTH from enum update_mode  
+mv: check if `<destination>` is a SKIP_WORKTREE_DIR  
+mv: free the with_slash in check_dir_in_index()  
+mv: rename check_dir_in_index() to empty_dir_has_sparse_contents()  
+t7002: add tests for moving from in-cone to out-of-cone  
 
 `git-rm`
 
 * Series "sy/sparse-rm" (in branch 'master')  
 [GitHub branch](https://github.com/git/git/commit/9b9445cfdec254dfd5e78fb00ec4476cee3d578c)  
 [Mailing list](https://lore.kernel.org/git/20220803045118.1243087-1-shaoxuan.yuan02@gmail.com/)  
-rm: integrate with sparse-index
-rm: expand the index only when necessary
-pathspec.h: move pathspec_needs_expanded_index() from reset.c to here
-t1092: add tests for `git-rm
+rm: integrate with sparse-index  
+rm: expand the index only when necessary  
+pathspec.h: move pathspec_needs_expanded_index() from reset.c to here  
+t1092: add tests for `git-rm  
 
 `git-grep`
 
 * Series "sy/sparse-grep" (in branch 'seen')  
 [GitHub branch](https://github.com/git/git/commit/81ae80e29855f75043008b07071c8a604f2de8ab)  
 [Mailing list](https://lore.kernel.org/git/20220817075633.217934-1-shaoxuan.yuan02@gmail.com/)  
-builtin/grep.c: walking tree instead of expanding index with --sparse
-builtin/grep.c: integrate with sparse index
-builtin/grep.c: add --sparse option
+builtin/grep.c: walking tree instead of expanding index with --sparse  
+builtin/grep.c: integrate with sparse index  
+builtin/grep.c: add --sparse option  
 
 Notice that this report is trying to be brief, as all the information is
 better preserved in the corresponding commit messages. View the commits and
